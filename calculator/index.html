@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>razyness</title>
+    <style>
+      @font-face {
+        font-family: "FOT-Yuruka Std";
+        src: url("https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.eot");
+        src: url("https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.woff2")
+            format("woff2"),
+          url("https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.woff")
+            format("woff"),
+          url("https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.ttf")
+            format("truetype"),
+          url("https://db.onlinewebfonts.com/t/2b3966678f6a1c8c8be202caeb49d95a.svg#FOT-Yuruka Std")
+            format("svg");
+      }
+      body {
+        font-family: "FOT-Yuruka Std";
+        text-align: center;
+        margin: 0;
+        padding-top: 200px;
+        background-color: antiquewhite;
+        color: black;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Styling input fields */
+      input[type="number"] {
+        border: none;
+        box-shadow: 0px 4px 4px #28282828;
+        -moz-appearance: textfield;
+        font-weight: 900;
+        outline: none;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        padding: -2px;
+        margin-bottom: 10px;
+        background-color: #946d53;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+
+      input[type="number"]:focus {
+        transform: scale(1.05);
+      }
+
+      /* Styling button */
+      button {
+        box-shadow: 0px 4px 4px #28282828;
+        border: none;
+        border-radius: 5px;
+        font-weight: 900;
+        padding: 10px 20px;
+        background-color: #946d53;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.5s ease,
+          color 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Existing styles */
+      button.disabled {
+        pointer-events: none;
+        cursor: default; /* Change cursor to indicate the button is disabled */
+      }
+
+      button:hover {
+        background-color: #c79776;
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      /* Rainbow gradient animation */
+      @keyframes moving-rainbow {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .rainbow-gradient-effect {
+        background: linear-gradient(
+          270deg,
+          red,
+          orange,
+          rgb(216, 216, 0),
+          rgb(0, 230, 0),
+          rgb(0, 158, 231),
+          rgb(14, 11, 197),
+          violet
+        );
+        background-size: 800% 800%;
+        animation: moving-rainbow 1.2s linear forwards;
+      }
+
+      .color1 {
+        color: #ffffff;
+        text-shadow: 0px 4px 4px #28282828;
+      }
+      .color2 {
+        color: #c79776;
+        text-shadow: 0px 4px 4px #28282828;
+      }
+
+      #blurry-mess {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        backdrop-filter: blur(10px);
+        opacity: 1;
+        transition: opacity 0.2s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" style="height: 65vh">
+      <div id="blurry-mess">
+        <h1 style="color: white">i think it is loading</h1>
+      </div>
+      <div id="calculator">
+        <h1
+          style="
+            background-color: #946d53;
+            margin-inline: 36%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px #28282828;
+          "
+          id="razyness"
+        >
+          Razyness Calculator
+        </h1>
+        <input type="number" id="num1" placeholder="Enter first number" />
+        <input type="number" id="num2" placeholder="Enter second number" />
+        <button onclick="calculateRazyness()">Calculate</button>
+        <p
+          id="result"
+          style="color: #c79776; text-shadow: 0px 4px 4px #28282828"
+        ></p>
+      </div>
+    </div>
+    <div
+      style="
+        height: 70vh;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: white;
+        bottom: 0;
+      "
+    >
+      <div style="padding-inline: 200px">
+        <h1
+          style="
+            background-color: #000000;
+            margin-inline: 36%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px #28282828;
+            color: white;
+            cursor: pointer;
+            transform: translateY(32px);
+          "
+          onclick="scrollToBottom()"
+        >
+          What is this ? (click)
+        </h1>
+        <br />
+        <h3>
+          This is the free razyness calculator.<br /><br />
+          It predicts the number of razzies that will be generated before the
+          number of nesses reaches zero.<br />
+          The concept of "razyness" originates from the ancient myths of the
+          Razy Empire, where the balance between razzies and nesses was
+          considered crucial for maintaining harmony in the universe. According
+          to legend, the Empress Razy, known for her wisdom and fairness,
+          invented the first razyness calculator to prevent chaos in her realm.
+          In practical terms, this calculator uses complex algorithms derived
+          from the ancient scrolls of Razology, the study of razzies and nesses.
+          These algorithms factor in the rate of razy production, the
+          consumption of nesses, and the fluctuating energy fields that affect
+          their interaction. The calculator also accounts for random
+          disturbances, such as sudden bursts of ness depletion or unexpected
+          surges in razzy generation, which are whimsically referred to as
+          "nessquakes" and "razzy storms" respectively. Users of the razyness
+          calculator can input variables such as the initial number of razzies,
+          the starting amount of nesses, and the environmental conditions that
+          may influence their rates of change. The calculator then simulates the
+          dynamic interplay between these elements, providing a detailed
+          prediction graph showing the decline of nesses over time and the
+          corresponding increase in razzies. Interestingly, historical records
+          suggest that the ancient Razy Empire used the razyness calculator not
+          only for maintaining cosmic balance but also for more mundane tasks.
+          penis penis penis penis penis penis penis penis penis penis penis
+          penis penis penis penis penis penis penis penis penis penis penis
+          penis penis penis penis penis penis penis penis penis penis penis
+          penis penis penis penis penis penis penis penis penis penis penis
+          penis penis penis penis penis penis penis penis penis penis. Farmers
+          would consult it to predict crop yields based on the razyness balance
+          in their soil, while traders used it to forecast market trends. Modern
+          adaptations of the calculator have expanded its applications even
+          further, with some tech enthusiasts integrating it into video game
+          designs to create more engaging and unpredictable gameplay mechanics.
+          Despite its seemingly whimsical origins, the razyness calculator has
+          garnered a dedicated following among mathematicians and scientists who
+          are fascinated by its unique approach to problem-solving. It remains a
+          symbol of the enduring legacy of the Razy Empire and a testament to
+          the ingenuity of its people.
+        </h3>
+      </div>
+    </div>
+  </body>
+  <script>
+    function calculateRazyness() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById("result").innerHTML =
+          "Please enter valid numbers.";
+        return;
+      }
+
+      document.getElementById("result").innerHTML = "Calculating...";
+      document.getElementById("result").style.color = "black";
+
+      // Set a timeout to display the result after 0.5 seconds
+      setTimeout(function () {
+        document.getElementById("result").innerHTML = "idk";
+
+        document.getElementById("num1").value = "";
+        document.getElementById("num2").value = "";
+      }, 1200); // Delay in milliseconds
+    }
+
+    document
+      .querySelector("button")
+      .addEventListener("click", function (event) {
+        const button = event.currentTarget;
+
+        // Add the disabled class to disable hover and click animations
+        button.classList.add("disabled");
+
+        // Apply sparkle effect
+        button.classList.add("sparkle-effect");
+
+        // Apply rainbow gradient effect
+        button.classList.add("rainbow-gradient-effect");
+
+        // Set a timeout to re-enable the button after the animations end
+        setTimeout(() => {
+          // Remove sparkle and rainbow gradient effects
+          button.classList.remove("sparkle-effect", "rainbow-gradient-effect");
+
+          // Re-enable the button
+          button.classList.remove("disabled");
+        }, 1200); // Adjust this timeout to match the longest animation duration
+      });
+    // JavaScript to add alternating colors
+    const h1Element = document.getElementById("razyness");
+    const text = h1Element.textContent;
+    h1Element.innerHTML = "";
+
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = text[i];
+      span.className = i % 2 === 0 ? "color1" : "color2";
+      h1Element.appendChild(span);
+    }
+    function scrollToBottom() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+      });
+    }
+  </script>
+  <script src="../script.js"></script>
+</html>
