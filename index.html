@@ -5,65 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>razyness</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
     <script>
       fetch("https://api.github.com/users/razyness")
         .then((response) => response.json())
         .then((data) => {
           const avatarUrl = data.avatar_url;
           document.getElementById("gh-avatar").src = avatarUrl;
+          var link = document.querySelector("link[rel~='icon']");
+          if (!link) {
+            link = document.createElement("link");
+            link.rel = "icon";
+            document.head.appendChild(link);
+          }
+          link.href = `https://images.weserv.nl/?url=${avatarUrl}&fit=cover&mask=circle&maxage=7d`;
         });
     </script>
   </head>
   <body>
-    <div id="content">
-      <div id="blurry-mess">
-        <h1>i think it is loading</h1>
-      </div>
-      <a href="/creatura/"><img src="img/la_creatura.png" id="la-creatura"></a>
-      <h1>
-        Hi maybe i am
-        <img
-          id="gh-avatar"
-          height="24em"
-          style="border-radius: 50%; margin-right: 0.4rem"
-        /><span style="color: white">razy</span>
-      </h1>
+    <div class="idk">
+      <div id="content">
+        <div id="blurry-mess">
+          <h1>raagghh jumpscare</h1>
+        </div>
+        <a href="/creatura/"
+          ><img src="img/la_creatura.png" id="la-creatura"
+        /></a>
+        <h1>
+          Hi maybe i am
+          <img
+            id="gh-avatar"
+            height="24em"
+            style="border-radius: 50%; margin-right: 0.4rem"
+          /><span style="color: white">razy</span>
+        </h1>
 
-      <p1
-        >I'm very meepious maybeness<br />oh i am maybe less than 170cm tall
-        and maybe im 18 years old and maybe i weigh 55kg today.<br />oh maybe i
-        am also dumb and maybe stupid and maybe i am also a little bit of a
-        monster</p1
-      >
-      <h2>I dreamt of this on november 9th 2022</h2>
-      <p1
-        >i had a tiny plush of myself always with me; i was in a warped version
-        of my school that was some kind of backrooms thingness; i struggled to
-        stand still and i fainted all the time and i couldn't see well (as if i
-        couldn't fully open my eyes/keep them open) i was in economy class and
-        the teacher was extremely fat, like her hand was as big as my face, and
-        she said she was growing claws on her knuckles and she was happy about
-        it because she thought she'd become wolverine then i left the classroom
-        and i fell down in the hallway and i started kind of floating and then
-        people grouped around me to see what was happening then i wanted to go
-        home and i found the force to get back up and i started walking around
-        but the school was a massive 4 floor maze kind of rounded and it looked
-        endless. I found a door that led to a train station i could use to go
-        back home but i didn't take a train because i needed my backpack which
-        for some reason I knew was at the entrance. I kept looking around until
-        i found said entrance and then i somehow transitioned to being outside
-        my house riding a bike, and a massive hornet was flying extremely close
-        to my left ear making a horrible noise. Then i got home and there were
-        cardboard boxes everywhere as if we had just moved and while going to my
-        room i found a rat that came out of a box and i told my dad, and he
-        stomped the rat to death and then everything went black and i woke
-        up</p1
-      >
-      <div style="height: 5rem"></div>
-      <footer>
-        <p>Created by <a href="https://github.com/razyness">me</a> today.</p>
-      </footer>
+        <p1
+          >I'm very meepious maybeness<br />oh i am maybe less than 170cm tall
+          and maybe im 18 years old and maybe i weigh 55kg today.<br />oh maybe
+          i am also dumb and maybe stupid and maybe i am also a little bit of a
+          monster</p1
+        >
+        <h2>I use this domain to maybe access maybe thingsnesses</h2>
+        <p1
+          >The dream log is <a href="/the-dream-in-question">GONE. FOREVER.</a
+          ><br />
+          An api can maybe accessed from here but maybe i'm not telling you what
+          it is for.<br />
+          A landing page for something very unrelated to maybe me will also be
+          here very soon.<br />
+          poop nuts<br />
+          oh maybe i have nothing to maybe say about myself maybe i'm sorry
+        </p1>
+        <div style="height: 5rem"></div>
+        <footer>
+          <p>Created by <a href="https://github.com/razyness">me</a> today.</p>
+        </footer>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>
