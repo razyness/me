@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>razyness</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-      fetch("https://api.github.com/users/razyness")
-        .then((response) => response.json())
-        .then((data) => {
-          const avatarUrl = data.avatar_url;
-          document.getElementById("gh-avatar").src = avatarUrl;
-          var link = document.querySelector("link[rel~='icon']");
-          if (!link) {
-            link = document.createElement("link");
-            link.rel = "icon";
-            document.head.appendChild(link);
-          }
-          link.href = `https://images.weserv.nl/?url=${avatarUrl}&fit=cover&mask=circle&maxage=7d`;
-        });
-    </script>
-  </head>
-  <body>
-    <div class="idk">
-      <div id="content">
-        <div id="blurry-mess">
-          <h1>raagghh jumpscare</h1>
-        </div>
-        <a href="/creatura/"
-          ><img src="img/la_creatura.png" id="la-creatura"
-        /></a>
-        <h1>
-          Hi maybe i am
-          <img
-            id="gh-avatar"
-            height="24em"
-            style="border-radius: 50%; margin-right: 0.4rem"
-          /><span style="color: white">razy</span>
-        </h1>
 
-        <p1
-          >I'm very meepious maybeness<br />oh i am maybe less than 170cm tall
-          and maybe im 18 years old and maybe i weigh 55kg today.<br />oh maybe
-          i am also dumb and maybe stupid and maybe i am also a little bit of a
-          monster</p1
-        >
-        <h2>I use this domain to maybe access maybe thingsnesses</h2>
-        <p1
-          >The dream log is <a href="/the-dream-in-question">GONE. FOREVER.</a
-          ><br />
-          An api can maybe accessed from here but maybe i'm not telling you what
-          it is for.<br />
-          A landing page for something very unrelated to maybe me will also be
-          here very soon.<br />
-          poop nuts<br />
-          oh maybe i have nothing to maybe say about myself maybe i'm sorry
-        </p1>
-        <div style="height: 5rem"></div>
-        <footer>
-          <p>Created by <a href="https://github.com/razyness">me</a> today.</p>
-        </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>razyness</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    fetch("https://api.github.com/users/razyness")
+      .then((response) => response.json())
+      .then((data) => {
+        const avatarUrl = data.avatar_url;
+        document.getElementById("gh-avatar").src = avatarUrl;
+        var link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+          link = document.createElement("link");
+          link.rel = "icon";
+          document.head.appendChild(link);
+        }
+        link.href = `https://images.weserv.nl/?url=${avatarUrl}&fit=cover&mask=circle&maxage=7d`;
+      });
+  </script>
+</head>
+
+<body>
+  <div id="idk">
+    <div id="content">
+      <div id="blurry-mess">
+        <h1>raagghh jumpscare</h1>
       </div>
+      <a href="/creatura/"><img src="img/la_creatura.png" id="la-creatura" /></a>
+      <h1>
+        Hi maybe i am
+        <img id="gh-avatar" height="24em" style="border-radius: 50%; margin-right: 0.4rem" /><span
+          style="color: white">razy</span>
+      </h1>
+
+      <p1>I'm very meepious maybeness<br />oh i am maybe less than 170cm tall
+        and maybe im 18 years old and maybe i weigh 55kg today.<br />oh maybe
+        i am also dumb and maybe stupid and maybe i am also a little bit of a
+        monster</p1>
+      <h2>I use this domain to maybe access maybe thingsnesses</h2>
+      <div class="project-chips">
+        <a href="/the-dream-in-question" class="chip">Dream Log</a>
+        <a href="/shrimp" class="chip">🦐 Shrimple</a>
+      </div>
+      <p1>The dream log is <a href="/the-dream-in-question">GONE. FOREVER.</a><br />
+        An api can maybe accessed from here but maybe i'm not telling you what
+        it is for.<br />
+        A landing page for something very unrelated to maybe me will also be
+        here very soon.<br />
+        poop nuts<br />
+        oh maybe i have nothing to maybe say about myself maybe i'm sorry
+      </p1>
+      <div style="height: 5rem"></div>
+      <footer>
+        <p>Created by <a href="https://github.com/razyness">me</a> today.</p>
+      </footer>
     </div>
-  </body>
-  <script src="script.js"></script>
+  </div>
+</body>
+<script src="script.js"></script>
+
 </html>
