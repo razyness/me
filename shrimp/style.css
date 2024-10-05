@@ -41,7 +41,7 @@ html {
 
 * {
     scroll-behavior: smooth;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 body {
@@ -69,8 +69,6 @@ body.dark #contents {
     right: 0;
     bottom: 0;
     background: radial-gradient(at bottom, rgb(60, 50, 60) 0%, rgb(30, 30, 36) 100%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -100,18 +98,20 @@ body.dark #navBar {
     background: linear-gradient(to bottom, rgba(22, 22, 34, 0.75) 0%, rgba(50, 50, 60, 0) 100%);
 }
 
-#navBar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    mask-image: var(--mask-image);
-    -webkit-mask-image: var(--mask-image);
-    z-index: -1;
+@-moz-document url-prefix() {
+    #navBar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        mask-image: var(--mask-image);
+        -webkit-mask-image: var(--mask-image);
+        z-index: -1;
+    }
 }
 
 #title {
