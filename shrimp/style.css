@@ -41,7 +41,7 @@ html {
 
 * {
     scroll-behavior: smooth;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -73,7 +73,7 @@ body.dark #contents {
     -webkit-backdrop-filter: blur(10px);
     z-index: -1;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
 }
 
 body.dark #darkBackgroundOverlay {
@@ -413,7 +413,7 @@ footer div p {
     padding: 15%;
     padding-block: 5rem;
     backdrop-filter: blur(10px);
-    transition: transform 0.5s ease, background-color 0.5s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 
@@ -443,7 +443,7 @@ footer div p {
     height: 100%;
     border: 2px solid var(--link-color);
     font-size: 1.5rem;
-    transition: border 0.5s ease;
+    transition: border 0.3s ease;
 }
 
 .input-container button {
@@ -457,7 +457,7 @@ footer div p {
     font-size: 1.5rem;
     border-radius: 25px;
     cursor: pointer;
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
 .input-container button:active {
@@ -519,6 +519,24 @@ footer div p {
         gap: 0.5rem;
     }
 
+    #cardsList,
+    .code-snippets {
+        margin-inline: 0 !important;
+        padding: 0;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #codeCard,
+    .card {
+        font-size: 0.8rem;
+    }
+
+    #codeCard .card-content {
+        margin: 0;
+    }
+
     #hero #heroButtons a {
         width: 100%;
         text-align: center;
@@ -530,6 +548,7 @@ footer div p {
     }
 
     #whyShrimple {
+        backdrop-filter: blur(0);
         padding-top: 5rem;
         padding-bottom: 0;
     }
@@ -565,6 +584,7 @@ footer div p {
     }
 
     #joinUs {
+        backdrop-filter: blur(0);
         margin: 2rem;
         margin-inline: 1rem;
         padding: 2rem;
@@ -583,10 +603,6 @@ footer div p {
 
     #joinUs p {
         font-size: 1rem;
-    }
-
-    pre.code-block {
-        font-size: 3rem;
     }
 
     .input-container {
