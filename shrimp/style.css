@@ -30,6 +30,7 @@ body.dark {
     --link-hover: black;
     --second-color: rgba(30, 30, 36, 0.7);
     scrollbar-color: rgba(255, 255, 255, 0.397) transparent !important;
+    background: #000;
 }
 
 body,
