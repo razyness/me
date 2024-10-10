@@ -334,9 +334,14 @@ body.dark .card {
     background-color: #f9f9f918;
 }
 
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .card-title h3 {
     font-size: 1.5rem;
-    margin: 0 0 1.5rem;
 }
 
 .card-content {
@@ -419,6 +424,9 @@ footer div p {
 
 
 #joinUs h2 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
     font-size: 5rem;
     margin: 3rem;
 }
@@ -535,6 +543,18 @@ footer div p {
         font-size: 0.8rem;
     }
 
+    .card-title {
+        justify-content: center;
+    }
+
+    .card-title img {
+        width: 40px;
+    }
+
+    #joinUs img {
+        width: 65px;
+    }
+
     #codeCard .card-content {
         margin: 0;
     }
@@ -558,6 +578,10 @@ footer div p {
     #whyShrimple .subtitle {
         font-size: 1rem;
         margin-inline: 5%;
+    }
+
+    .about .card-title {
+        margin-right: 40px;
     }
 
     #cardsList {
@@ -599,6 +623,8 @@ footer div p {
     }
 
     #joinUs h2 {
+        display: flex;
+        justify-content: center;
         font-size: 2rem;
         margin: 1rem;
     }
