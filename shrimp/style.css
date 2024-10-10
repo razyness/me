@@ -438,7 +438,7 @@ footer div p {
 .input-container input {
     font-family: var(--primary-font);
     text-align: center;
-    width: 85%;
+    min-width: 80%;
     padding: 1rem;
     border-radius: 25px;
     height: 100%;
@@ -452,7 +452,8 @@ footer div p {
     background-color: var(--link-color);
     color: var(--second-color);
     border: 2px solid var(--link-color);
-    width: 15%;
+    text-align: center;
+    min-width: 20%;
     height: 100%;
     padding: 1rem;
     font-size: 1.5rem;

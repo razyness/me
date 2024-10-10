@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shimp</title>
-    <link rel="icon" href="/shrimp/favicon.png">
-    <link rel="stylesheet" href="/shrimp/style.css">
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -219,8 +219,10 @@ safeDivide(10, 0)</code></pre>
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
 
-                const x = Math.random() * window.innerWidth * 1.5;
-                const y = Math.random() * window.innerWidth * 1.5;
+                var sampleValue = Math.max(window.innerWidth, window.innerHeight) * 1.5
+
+                const x = Math.random() * sampleValue;
+                const y = Math.random() * sampleValue;
                 star.style.top = `${y}px`;
                 star.style.left = `${x}px`;
 
