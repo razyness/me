@@ -160,6 +160,55 @@ safeDivide(10, 0)</code></pre>
                     </div>
                 </li>
             </ul>
+            <h2>💻 Performance</h2>
+            <p class="subtitle">Here's how Shrimple compares to other popular programming languages, according to our
+                benchmarks. <a href="/bench">Learn more.</a></p>
+            <div class="tabler">
+                <table>
+                    <tr>
+                        <th>Language</th>
+                        <th>Performance</th>
+                        <th>Memory Usage</th>
+                        <th>Development Speed</th>
+                        <th>Maintainability</th>
+                    </tr>
+                    <tr>
+                        <td class="shrimple">Shrimple</td>
+                        <td class="shrimple">Excellent</td>
+                        <td class="shrimple">Low</td>
+                        <td class="shrimple">Very Fast</td>
+                        <td class="shrimple">Easy</td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>Good</td>
+                        <td>Medium</td>
+                        <td>Fair</td>
+                        <td>Challenging</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Slow</td>
+                        <td>High</td>
+                        <td>Fast</td>
+                        <td>Easy</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Good</td>
+                        <td>Medium</td>
+                        <td>Fair</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td>Rust</td>
+                        <td>Excellent</td>
+                        <td>Low</td>
+                        <td>Slow</td>
+                        <td>Challenging</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div id="joinUs">
             <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Smilies/Love%20Letter.png?raw=true"
@@ -213,6 +262,8 @@ safeDivide(10, 0)</code></pre>
             document.body.classList.add("dark");
             document.getElementById('starContainer').style.opacity = 1;
             document.getElementById("darkModeIcon").textContent = "🌙";
+        } else {
+            document.body.classList.remove("dark");
         }
 
         function createStars() {
