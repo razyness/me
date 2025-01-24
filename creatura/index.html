@@ -2,31 +2,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>la creatura</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.056/juliamono.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
-  <div id="idk">
-    <div id="content" style="margin-top: 0 !important">
-      <div id="blurry-mess">
-        <h1>i think it is loading</h1>
-      </div>
-      <h1>The creature in question:</h1>
-      <img src="/img/la_creatura.png" /><br />
-      <p1>(she is very evil (me) and maybe she should be executed)</p1><br />
-      <p1>Oh i think that maybe she is wearing my favorite pajamas but maybe i
-        don't have matching socks and she does and maybe i'm a little
-        jealous</p1>
-      <div style="height: 5rem"></div>
+  <div id="page-wrap">
+    <div class="glow"></div>
+    <div class="content">
+      <section class="section glass">
+        <h1>The creature in question:</h1>
+
+        <img src="/img/la_creatura.png" class="creature-image" alt="la creatura" />
+
+        <p>(she is very evil (me) and maybe she should be executed)</p>
+
+        <p>Oh i think that maybe she is wearing my favorite pajamas but maybe i
+          don't have matching socks and she does and maybe i'm a little
+          jealous</p>
+      </section>
+
       <footer>
         <p><a href="/">Back to safety</a></p>
       </footer>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const glow = document.querySelector('.glow');
+      glow.style.setProperty('--x', e.clientX + 'px');
+      glow.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
 </body>
-<script src="/script.js"></script>
 
 </html>

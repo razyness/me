@@ -1,11 +1,3 @@
-window.addEventListener("load", function () {
-  document.getElementById("blurry-mess").style.opacity = "0";
-
-  setTimeout(function () {
-    document.getElementById("blurry-mess").remove();
-  }, 200);
-});
-
 fetch("https://api.github.com/users/razyness")
   .then((response) => {
     if (!response.ok) {
