@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - shimp</title>
+    <link rel="icon" href="/shrimp/favicon.png">
+    <link rel="stylesheet" href="/shrimp/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+
+<body class="dark">
+    <div id="contents">
+        <div id="darkBackgroundOverlay"></div>
+        <div id="starContainer"></div>
+        <nav id="navBar">
+            <div id="title">
+                🦐 shrimple
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#joinUs">Contact</a></li>
+                <li id="darkMode"><a id="darkModeIcon" href="#">☀️</a></li>
+            </ul>
+        </nav>
+        <div id="whyShrimple" class="container">
+            <h2>🧠 Our Philosophy</h2>
+            <p class="subtitle">At Shrimple, we believe programming should be accessible, enjoyable, and efficient: just like the humble shrimp that inspired our name.</p>
+            <ul id="cardsList">
+                <li>
+                    <div class="card">
+                        <div class="card-title">
+                            <h3><span style="font-size: 2.5rem">🌊</span> Our Story</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Shrimple was born from a late-night coding session and a peculiar dream about crustaceans writing code. What started as a joke quickly evolved into a serious project when we realized the potential of a truly minimalist language.</p>
+                            <p>Founded in 2024 by a team of developers who were tired of bloated frameworks and complex syntax, Shrimple aims to bring joy back to programming.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="card-title">
+                            <h3><span style="font-size: 2.5rem">🔍</span> Our Mission</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>We're on a mission to create the most intuitive programming experience possible. By focusing on readability and simplicity, we're making coding accessible to everyone from beginners to seasoned professionals.</p>
+                            <p>Our goal is to reduce the cognitive load of programming, allowing developers to focus on solving problems rather than wrestling with syntax.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="card-title">
+                            <h3><span style="font-size: 2.5rem">👥</span> Our Team</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Our diverse team brings together expertise from various backgrounds in computer science, linguistics, and design. United by our passion for elegant code, we work remotely across different time zones.</p>
+                            <p>We're always looking for contributors who share our vision. Join us in making programming a more delightful experience!</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <h2>🔮 The Future of Shrimple</h2>
+            <p class="subtitle">Our roadmap is filled with exciting features and improvements that will make Shrimple even more powerful while maintaining its core simplicity.</p>
+            
+            <ul id="cardsList" class="code-snippets">
+                <li>
+                    <div class="card" id="codeCard">
+                        <div class="card-title">
+                            <h3>Upcoming Features</h3>
+                        </div>
+                        <div class="card-content">
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li>Enhanced web development libraries</li>
+                                <li>Improved package management system</li>
+                                <li>Native mobile application support</li>
+                                <li>Advanced AI integration capabilities</li>
+                                <li>Interactive learning platform for beginners</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card" id="codeCard">
+                        <div class="card-title">
+                            <h3>Community Contributions</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>The Shrimple community has been instrumental in shaping the language. Here are some ways you can contribute:</p>
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li>Submit bug reports and feature requests</li>
+                                <li>Contribute to documentation</li>
+                                <li>Create libraries and extensions</li>
+                                <li>Share your Shrimple projects</li>
+                                <li>Help newcomers in our forums</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <div class="column">
+                <div id="title">
+                    🦐 shrimple
+                </div>
+                <span>Shrimple is a modern programming language designed for simplicity and efficiency. Inspired by the
+                    elegance of its namesake, Shrimple offers a clean and intuitive syntax that prioritizes
+                    readability while maintaining powerful functionality.</span>
+                <p>© 2025 Shrimple. All rights reserved.</p>
+            </div>
+            <div class="column">
+                <div id="title">
+                    Contact Us
+                </div>
+                <span>If you have any questions or feedback, please feel free to reach out to us.
+                    We're always here to help!</span>
+                <ul>
+                    <li><a href="mailto:contact@shrimple.dev">contact@shrimple.dev</a></li>
+                    <li><a href="https://discord.gg/5x6y3f9">Discord</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script>
+        document.getElementById("darkMode").addEventListener("click", function () {
+            document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                document.getElementById("darkModeIcon").textContent = "🌙";
+                document.getElementById('starContainer').style.opacity = 1;
+            } else {
+                document.getElementById("darkModeIcon").textContent = "☀️";
+                document.getElementById('starContainer').style.opacity = 0;
+            }
+        });
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add("dark");
+            document.getElementById('starContainer').style.opacity = 1;
+            document.getElementById("darkModeIcon").textContent = "🌙";
+        }
+
+        function createStars() {
+            const starContainer = document.getElementById('starContainer');
+
+            for (let i = 0; i < 350; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+
+                const size = Math.random() * 2 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+
+                const x = Math.random() * window.innerWidth * 1.5;
+                const y = Math.random() * window.innerWidth * 1.5;
+                star.style.top = `${y}px`;
+                star.style.left = `${x}px`;
+
+                starContainer.appendChild(star);
+            }
+        }
+        createStars();
+    </script>
+</body>
+
+</html>
